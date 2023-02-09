@@ -1,0 +1,106 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block title%}
+
+home
+
+{% endblock %}
+
+
+{% block content %}
+
+<marquee behavior="" direction=" left  " style="color: aqua;">improve your skill expert & advance</marquee>
+
+<h1 class="head1" style="text-align: center;"> E <sup style="color: blue;"> Learning </sup></h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src=" {% static 'images/rs.jpg'%}" alt="" style="width: 100%;">
+            
+        </div>
+        <div class="col-md-6 " style="margin-top: 100px;">
+          <p> centur adipisicing elit. Itaque quidem sapiente at, sunt, voluptas consequuntur quam similique quibusdam ex odit quaerat fugit! Incidunt quae reprehenderit ullam, iusto id distinctio nisi.</p>
+        </div>
+    </div>
+</div>
+<h1 class="head2" style="text-align: center;"> Features </h1>
+<br>
+
+<div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="text-align: center;">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-people-fill display-1 " style="color: darkgreen;"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Win like an army</h5>
+                  <p class="card-text">We work as a team because we get paid only when you get paid.</p>
+                
+                </div>
+              </div>
+    
+          
+        </div>
+        <div class="col-md-4" style="text-align: center;">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-mortarboard-fill display-1" style="color: blue;"></i>
+                
+                <div class="card-body">
+                  <h5 class="card-title">You are the Student and the Teacher</h5>
+                  <p class="card-text">“We have learnt from others. You will learn from us. And someone else will learn from you”</p>
+                 
+                </div>
+              </div>
+            
+
+        </div>
+        <div class="col-md-4" style="text-align: center;">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-envelope-paper-fill display-1" style="color: crimson;"></i>
+                
+                <div class="card-body">
+                  <h5 class="card-title">No one size fit all classes</h5>
+                  <p class="card-text">Freely explore the different areas of programming. Find what you’re passionate about. And get after it.
+                </p>
+                  
+                </div>
+              </div>
+            
+
+        </div>
+        
+    </div>
+</div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+
+    {% for i in res %}
+    <div class="col-md-6" style="text-align: center;">
+      <div class="card" style="width: 18rem;">
+        <i class="bi bi-bag-check-fill display-1" style="color: green;"></i>
+  
+        <div class="card-body">
+          <h5 class="card-title">{{i.D_name}}</h5>
+          <p class="card-text">{{i.D_desc}}</p>
+         
+        </div>
+        {% endfor %}
+    </div>
+
+    
+    </div>
+
+    
+
+
+
+{% endblock %}
+
+
+
+
